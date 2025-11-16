@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             try {
-                const response = await fetch('http://localhost:5000/consultation', {
+                const response = await fetch('https://campuscare-backend-mtd3.onrender.com', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
@@ -33,4 +33,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
 });
