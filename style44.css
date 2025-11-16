@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(vivid-blurred-colorful-background.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+}
+
+nav {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 170px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+
+nav ul li a,
+.login-btn {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+.login-btn {
+    margin-right: 15px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #df4881, #c430d7);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+}
+
+.content {
+    margin-top: 10%;
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 70px;
+    color: #222;
+}
+
+.content p {
+    margin: 10px 0 30px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+
+/* Fixed selector: space was missing */
+.content .btn {
+    padding: 15px 80px;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+
+.btn:hover {
+    border-bottom-right-radius: 30px;
+}
+.hero-img {
+  width: 520px;
+  position: absolute;
+  right: 8%;
+  bottom: 0;
+  animation: float 4s ease-in-out infinite;
+}
+
+
+.hero-img.anim {
+    animation-delay: 1.5s;
+}
+
+/* Fixed animation direction & movement */
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section base */
+.section {
+  padding: 90px 8%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #1d3557;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #00b4d8;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Services cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 180, 216, 0.2);
+}
+
+.card h3 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.light-bg {
+  background: #e9f5f5;
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border: 1px solid #00b4d8;
+}
+
+.submit-btn {
+  background: #00b4d8;
+  color: white;
+  border: none;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #0077b6;
+}
+
+/* Contact info card */
+.contact-card {
+  max-width: 350px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.contact-card a {
+  color: #00b4d8;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #1d3557;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Scroll animation */
+.anim {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img {
+    position: static;
+    width: 350px;
+    margin-top: 20px;
+  }
+
+  nav ul {
+    display: none; /* optional: for a clean mobile view */
+  }
+}

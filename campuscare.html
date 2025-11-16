@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website CampusCare</title>
+    <link rel="stylesheet" href="style44.css">  
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="Screenshot_2025-11-01_152616-removebg-preview.png" alt="logo" class="logo">
+            <ul>
+              <li><a href="campuscare.html">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="awareness.html">Disease awareness</a></li>
+              <li><a href="devlopers.html">Developers</a></li>
+            </ul>
+            <div>
+                <a href="loginregister.html" class="login-btn">Login</a>
+                <a href="loginregister.html" class="btn">Register</a>
+            </div>
+        </nav>
+
+        <div class="content">
+            <h1 class="anim">Dedicated to your <br> Health and Wellness</h1>
+            <p class="anim">Your health is our first priority with expert care tailored just for you, trusted by many people. We provide compassionate and advanced medical solutions to keep you well.</p>
+            <a href="#contact" class="btn anim">Book a Consultation</a>
+        </div>
+        <img src="Medical-Student-removebg-preview.png" class="hero-img" alt="Doctor Illustration">
+
+    </div>
+
+     <!-- Services Section -->
+    <section id="services" class="section">
+        <h2 class="section-title">Our Services</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Online Consultation</h3>
+                <p>Speak to certified doctors via secure video — general medicine, mental health, pediatrics & more.</p>
+            </div>
+
+            <div class="card">
+                <h3>Prescription Support</h3>
+                <p>Receive digital prescriptions and medication guidance from your clinician.</p>
+            </div>
+
+            <div class="card">
+                <h3>Health Monitoring</h3>
+                <p>Track symptoms, vitals and receive care reminders all in one place.</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- About Section -->
+    <section id="about" class="section light-bg">
+        <h2 class="section-title">About Campus Care</h2>
+        <p>Campus Care is committed to providing accessible healthcare for every student.
+           Through cutting-edge telemedicine, we connect you with experts anytime & anywhere.</p>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Book a Consultation</h2>
+
+        <form id="contactform" class="contact-form">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="text" id="rollno" placeholder="Roll Number" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <select id="service" required >
+                <option value="">Select Service</option>
+                <option value="General Consultation">General Consultation</option>
+                <option value="Emergency">Emergency</option>
+                <option value="Mental Health">Mental Health</option>
+                <option value="Prescription Refill">Prescription Refill</option>
+            </select>
+            <textarea id="message" placeholder="Describe your concern" required></textarea>
+            <button type="submit" class="btn submit-btn">Request Appointment</button>
+        </form>
+    </section>
+
+       <!-- Contact Info Card -->
+        <aside class="contact-card">
+            <h3>Contact & Support</h3>
+
+            <p>
+                Phone: <strong>+1 800 555 1234</strong><br>
+                Email: <a href="mailto:support@compuscare.com">support@compuscare.com</a>
+            </p>
+
+            <hr>
+
+            <h4>Clinic Hours</h4>
+            <p>
+                Mon–Fri: 10:00–17:00<br>
+                Sat: Closed<br>
+                Sun: Closed
+            </p>
+        </aside>
+
+
+    <!-- Footer -->
+    <footer>
+        © <span id="year"></span> Campus Care — All Rights Reserved.
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="booking.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About The Developers - Campus Care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --font-sans: 'Inter', sans-serif;
+    --bg-image: url('vivid-blurred-colorful-background.jpg');
+    --accent: #3b82f6;
+    --muted: #64748b;
+  
+    --nav-text: #0f172a;
+   
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;font-size:17px;}
+  body{
+    font-family:var(--font-sans);
+    color:var(--nav-text);
+    background: var(--bg-image) no-repeat center/cover fixed;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+
+  /* ---------- NAV ---------- */
+  .site-nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .nav-inner{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 24px;
+  }
+
+  .nav-logo img{
+    width:130px;
+    height:auto;
+    object-fit:contain;
+  }
+
+  .nav-links{
+    display:flex;
+    gap:28px;
+    justify-content:center;
+    align-items:center;
+  }
+  .nav-links a{
+    text-decoration:none;
+    color:var(--nav-text);
+    font-weight:700;
+    font-size:1rem;
+    transition:color .2s, transform .12s;
+  }
+  .nav-links a:hover{ color:var(--accent); transform:translateY(-2px); }
+
+  .nav-actions{
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+  .btn-outline,.btn-solid{
+    padding:10px 18px;
+    border-radius:999px;
+    font-weight:700;
+    border:2px solid var(--accent);
+    font-size:0.95rem;
+    text-decoration:none;
+    transition:background .2s,color .2s;
+  }
+  .btn-outline{color:var(--accent);background:transparent;}
+  .btn-outline:hover{background:var(--accent);color:#fff;}
+  .btn-solid{background:var(--accent);color:#fff;}
+  .btn-solid:hover{background:#2563eb;}
+
+  /* ---------- MOBILE ---------- */
+  @media (max-width: 780px){
+    .nav-inner{flex-wrap:wrap;justify-content:space-between;padding:12px 16px;}
+    .nav-links{
+      flex-direction:column;
+      width:100%;
+      background:var(--nav-bg);
+      border-top:1px solid rgba(0,0,0,0.05);
+      margin-top:10px;
+    }
+    .nav-links a{
+      padding:12px 0;
+      border-bottom:1px solid rgba(0,0,0,0.05);
+      width:100%;
+      text-align:center;
+      font-size:1.05rem;
+    }
+  }
+
+  /* ---------- PAGE CONTENT ---------- */
+  .page-wrapper{
+    padding-top:120px;
+    max-width:1100px;
+    margin:0 auto;
+    padding-left:16px;
+    padding-right:16px;
+  }
+
+  .hero-section{
+    text-align:center;
+    margin-bottom:50px;
+    color:#fff;
+  }
+  .hero-section h1{
+    font-size:3rem;
+    font-weight:800;
+    background:linear-gradient(90deg,#6366f1,#f9a8d4);
+    -webkit-background-clip:text;
+    color:transparent;
+  }
+  .subtitle{margin-top:8px;color:rgba(255,255,255,0.9);font-weight:500;font-size:1.2rem;}
+  .team-name{margin-top:12px;font-size:1.8rem;font-weight:700;color:rgba(255,255,255,0.95);}
+
+  .card-grid{
+    display:grid;
+    gap:24px;
+    grid-template-columns:1fr;
+    margin-top:36px;
+  }
+  @media(min-width:640px){.card-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1024px){.card-grid{grid-template-columns:repeat(4,1fr);}}
+
+  .profile-card{
+    background:var(--card-bg);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 8px 22px rgba(2,6,23,0.15);
+    transition:transform .2s;
+  }
+  .profile-card:hover{transform:translateY(-5px);}
+  .profile-card img{width:100%;height:200px;object-fit:cover;display:block;}
+  .card-content{padding:18px;color:#0f172a;font-size:1rem;}
+  .card-content h3{font-size:1.2rem;margin-bottom:6px;}
+  .role{
+    display:block;
+    color:var(--accent);
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:0.85rem;
+    margin-bottom:8px;
+  }
+  .card-content ul{color:var(--muted);margin-left:18px;margin-top:8px;line-height:1.6;}
+
+  .thanks-box{
+    background:#fff;
+    padding:30px;
+    border-radius:14px;
+    text-align:center;
+    margin-top:40px;
+    box-shadow:0 20px 30px rgba(2,6,23,0.08);
+    font-size:1.1rem;
+  }
+
+  footer{
+    text-align:center;
+    margin-top:50px;
+    padding:28px 8px;
+    color:rgba(255,255,255,0.85);
+    font-size:1rem;
+  }
+  footer a{color:inherit;text-decoration:underline;}
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <a href="bhavi.html"><img src="Screenshot_2025-11-01_152616-removebg-preview.png" alt="Campus Care logo"></a>
+      </div>
+
+      <nav class="nav-links">
+        <a href="bhavi.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about" aria-current="page">About Us</a>
+        <a href="awareness.html">Disease awareness</a>
+        <a href="Aboutus.html">Developers</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#login" class="btn-outline">Login</a>
+        <a href="#register" class="btn-solid">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="page-wrapper">
+    <section class="hero-section">
+      <h1>THE DEVELOPERS</h1>
+      <p class="subtitle">Meet the team that made it all possible.</p>
+      <h1 class="team-name">"THE DEBUG THUGS"</h1>
+      <p style="max-width:720px;margin:14px auto;color:rgba(255,255,255,0.9);font-size:1.1rem;">
+        Campus Care is built with dedication, hard work, time, and most importantly, teamwork. Our team consists of four members who worked with great effort and energy during this project.
+      </p>
+    </section>
+
+    <section>
+      <h1 style="color:#fff;text-align:center;margin-bottom:20px;font-size:2.0rem;">Meet the Members</h1>
+      <div class="card-grid">
+        <div class="profile-card">
+          <img src="bhavi.jpeg" alt="Bhavishya">
+          <div class="card-content">
+            <h3>BHAVISHYA</h3>
+            <span class="role">Team Leader</span>
+            <ul><li>Handled the CSS styling</li><li>Managed project JavaScript</li></ul>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <img src="yukti.jpeg" alt="Yukti Yadav">
+          <div class="card-content">
+            <h3>YUKTI YADAV</h3>
+            <span class="role">HTML &amp; Design</span>
+            <ul><li>Designed the web content</li><li>Created the official logo</li><li>Handled theme designing</li></ul>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <img src="Meghna.jpeg" alt="Meghna Kumar">
+          <div class="card-content">
+            <h3>MEGHNA KUMAR</h3>
+            <span class="role">Backend Developer</span>
+            <ul><li>Handled all backend logic</li><li>Designed the database schema</li></ul>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <img src="Prince.png" alt="Prince Singhdoya">
+          <div class="card-content">
+            <h3>PRINCE SINGHDOYA</h3>
+            <span class="role">Full-Stack Developer</span>
+            <ul><li>Designed login/signup page</li><li>Assisted in backend coding</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="thanks-section">
+      <div class="thanks-box">
+        <h2>A Special Thanks</h2>
+        <p>We all really appreciate our friends who supported us all the time while designing the website and helped us.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> The Debug Thugs. All rights reserved.</p>
+    <div>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
