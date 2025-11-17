@@ -31,8 +31,8 @@ CREATE TABLE IF NOT EXISTS feedback (
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS consultations (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    rollno TEXT NOT NULL,
+    Full Name TEXT NOT NULL,
+    Roll Number TEXT NOT NULL,
     email TEXT NOT NULL,
     service TEXT NOT NULL,
     message TEXT NOT NULL,
@@ -45,3 +45,4 @@ connection.commit()
 connection.close()
 
 print("✅ Database initialized with tables!")
+
